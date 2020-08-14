@@ -228,6 +228,49 @@ instant_build = yes }
 		}
 	}
 
+	#Focus for Build Up African Colonies
+	focus = {
+		id = ENG_build_up_african_colonies
+		icon = GFX_focus_generic_africa_production
+		x = 21
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_conqeur_southern_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = africa }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = africa }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = africa }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
 	#Focus for Our Military
 	focus = {
 		id = ENG_our_military
@@ -489,6 +532,25 @@ add_offsite_building= { type = arms_factory level = 1 }
 		completion_reward = {
 			add_political_power = 25
 add_stability = 0.02
+		}
+	}
+
+	#Focus for Take Cape Africa
+	focus = {
+		id = ENG_take_cape_africa
+		icon = GFX_goal_generic_territory_or_war
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_turn_to_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 275
+transfer_state = 681
+add_political_power = 25
 		}
 	}
 
@@ -1049,6 +1111,109 @@ add_political_power = 25
 		}
 	}
 
+	#Focus for Invade Canada
+	focus = {
+		id = ENG_invade_canada
+		icon = GFX_focus_spa_the_war_of_vengeance
+		x = 18
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_war_with_the_natives }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			all_state = {
+limit = { is_owned_by = FRA is_on_continent = north_america }
+add_claim_by = ENG
+}
+		}
+	}
+
+	#Focus for Puppets in America
+	focus = {
+		id = ENG_puppets_in_america
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = 15
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_american_colonies }
+		mutually_exclusive = { focus = ENG_direct_control_of_the_americas }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			all_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG }
+add_compliance = 15
+add_resistance = -5
+}
+}
+		}
+
+	#Focus for A Fully Industrialized America
+	focus = {
+		id = ENG_a_fully_industrialized_america
+		icon = GFX_focus_generic_industry_3
+		x = 16
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_expand_american_industry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 2
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
 	#Focus for All Roads Lead To England
 	focus = {
 		id = ENG_all_roads_lead_to_england
@@ -1518,6 +1683,107 @@ add_offsite_building= { type = arms_factory level = 1 }
 		}
 	}
 
+	#Focus for Expand American Industry
+	focus = {
+		id = ENG_expand_american_industry
+		icon = GFX_focus_generic_industry_2
+		x = 16
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_puppets_in_america 
+			focus = ENG_direct_control_of_the_americas 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 2
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Direct Control of the Americas
+	focus = {
+		id = ENG_direct_control_of_the_americas
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 17
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_american_colonies }
+		mutually_exclusive = { focus = ENG_puppets_in_america }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_state = {
+limit = { is_on_continent = north_america is_owned_by = ENG NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+		}
+	}
+
 	#Focus for Force Ireland to Protestantism
 	focus = {
 		id = ENG_force_ireland_to_protestantism
@@ -1535,6 +1801,24 @@ add_offsite_building= { type = arms_factory level = 1 }
 add_ideas = protestant
 add_stability = -0.05
 }
+add_political_power = 25
+		}
+	}
+
+	#Focus for Settle the Caribbean
+	focus = {
+		id = ENG_settle_the_caribbean
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 18
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_turn_to_the_americas }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 474
 add_political_power = 25
 		}
 	}
@@ -1645,6 +1929,24 @@ instant_build = yes }
 		}
 	}
 
+	#Focus for Found Jamestown
+	focus = {
+		id = ENG_found_jamestown
+		icon = GFX_goal_generic_territory_or_war
+		x = 16
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_turn_to_the_americas }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 362
+add_political_power = 25
+		}
+	}
+
 	#Focus for Suppress French Resistance
 	focus = {
 		id = ENG_suppress_french_resistance
@@ -1733,6 +2035,26 @@ type = arms_factory
 level = 1
 instant_build = yes }
 }
+		}
+	}
+
+	#Focus for Conqeur Southern Africa
+	focus = {
+		id = ENG_conqeur_southern_africa
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 21
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_take_cape_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 719
+transfer_state = 541
+add_political_power = 25
+add_stability = -0.01
 		}
 	}
 
@@ -2183,6 +2505,59 @@ add_offsite_building= { type = arms_factory level = 1 }
 		}
 	}
 
+	#Focus for Puppets in Africa
+	focus = {
+		id = ENG_puppets_in_africa
+		icon = GFX_focus_CZE_german_puppet
+		x = 22
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_african_colonies }
+		mutually_exclusive = { focus = ENG_direct_control_of_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SAF = {
+all_state = {
+limit = { is_owned_by = ENG }
+add_core_of = SAF
+}
+transfer_state = 719
+transfer_state = 275
+transfer_state = 681
+}
+puppet = SAF
+add_stability = 0.025
+		}
+	}
+
+	#Focus for Direct Control of Africa
+	focus = {
+		id = ENG_direct_control_of_africa
+		icon = GFX_goal_generic_political_pressure
+		x = 20
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_build_up_african_colonies }
+		mutually_exclusive = { focus = ENG_puppets_in_africa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = africa NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = africa is_coastal = yes NOT = { is_core_of = ENG } }
+add_core_of = ENG
+}
+		}
+	}
+
 	#Focus for Return to Catholicism
 	focus = {
 		id = ENG_return_to_catholicism
@@ -2227,7 +2602,97 @@ add_stability = -0.15
 		}
 	}
 
-#Focus for Beacon of Democracy
+	#Focus for Spread to the Appalachians
+	focus = {
+		id = ENG_spread_to_the_appalachians
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_found_jamestown }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 363
+transfer_state = 364
+transfer_state = 365
+transfer_state = 815
+transfer_state = 360
+transfer_state = 359
+transfer_state = 834
+transfer_state = 813
+transfer_state = 358
+transfer_state = 814
+		}
+	}
+
+	#Focus for Build up American Colonies
+	focus = {
+		id = ENG_build_up_american_colonies
+		icon = GFX_focus_generic_industry_1
+		x = 16
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_spread_to_the_appalachians 
+			focus = ENG_war_with_the_natives 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = infrastructure
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 2
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = { is_on_continent = north_america }
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Beacon of Democracy
 	focus = {
 		id = ENG_beacon_of_democracy
 		icon = GFX_goal_support_democracy
@@ -2875,6 +3340,38 @@ add_political_power = -25
 		completion_reward = {
 			add_stability = 0.05
 add_political_power = 50
+		}
+	}
+
+	#Focus for Further Industrialize Africa
+	focus = {
+		id = ENG_further_industrialize_africa
+		icon = GFX_focus_generic_africa_factory
+		x = 21
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_puppets_in_africa 
+			focus = ENG_direct_control_of_africa 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			681 = {
+add_extra_state_shared_building_slots = 3
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+}
 		}
 	}
 
