@@ -6,8 +6,8 @@ state=
 	
 	state_category = enclave
 	history={
-		owner = SPR
-		add_core_of = SPR
+		owner = SPI
+		add_core_of = SPI
 		victory_points = { 4135 10 }
 		buildings = {
 			infrastructure = 6
