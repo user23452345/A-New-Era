@@ -1,0 +1,20 @@
+state={
+	id=927
+	name="STATE_927"
+	history={
+		owner = SOG
+		add_core_of = SOG
+		victory_points = {
+			4927 10
+		}
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces={
+		10812 10915 
+	}
+	manpower=24782
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

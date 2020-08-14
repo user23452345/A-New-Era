@@ -1,0 +1,14 @@
+state={
+	id=817
+	name="STATE_817"
+	history={
+		owner = DEN
+		add_core_of = DEN
+	}
+	provinces={
+		6361 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

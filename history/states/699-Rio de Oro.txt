@@ -1,0 +1,23 @@
+
+state={
+	id=699
+	name="STATE_699"
+
+	history={
+		owner = XXX
+		add_core_of = XXX
+		add_core_of = MOR
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		4920 5012 7979 10875 
+	}
+	manpower=52640
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}
