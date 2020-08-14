@@ -1,4 +1,4 @@
-﻿capital = 891
+﻿capital = 884
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
