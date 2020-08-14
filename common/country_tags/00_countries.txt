@@ -12,6 +12,7 @@ AUS	= "countries/Austria.txt"
 LIT	= "countries/Lithuania.txt"
 EST	= "countries/Estonia.txt"
 LAT	= "countries/Latvia.txt"
+SPR = "countries/Spain.txt"
 ITA = "countries/Italy.txt"
 ROM = "countries/Romania.txt"
 YUG = "countries/Yugoslavia.txt"
@@ -294,4 +295,4 @@ MUG = "countries/Mughals.txt"
 
 RUS = "countries/Russia.txt"
 
-SPI = "countries/SpainNew.txt"
+
