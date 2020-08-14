@@ -2,8 +2,8 @@ state={
 	id=865
 	name="STATE_801"
 	history = {
-		owner = SPR
-		add_core_of = SPR
+		owner = SPI
+		add_core_of = SPI
 		}
 	provinces={
 		9853 

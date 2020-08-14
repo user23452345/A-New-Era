@@ -35,7 +35,7 @@ bookmarks = {
 			}
 		}
 
-		SPR = {
+		SPI = {
 			history = SPR_SCENARIO_1550_DESC
 			ideology = neutrality
 			ideas = {
