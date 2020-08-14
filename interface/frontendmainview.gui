@@ -284,7 +284,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "mainmenu_social_buttons"
-		position = { x=-50 y=25 }	
+		position = { x=-45 y=25 }	
 		size = { width = 240 height = 90 }
 		Orientation = center	
 		origo = center
@@ -360,7 +360,7 @@ guiTypes = {
 			quadTextureSprite ="facebook"
 			clicksound = click_default
 			pdx_tooltip = "MENU_FACEBOOK"
-			web_link = "https://www.facebook.com/Heartsofiron"
+			web_link = "https://discord.gg/H2qEbZS"
 		}
 		ButtonType = {
 			name = "twitter_button"
